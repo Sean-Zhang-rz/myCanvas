@@ -14,8 +14,8 @@ class Particle {
   opacity: number; // 粒子的透明度
   width: number;
   height: number;
-  Inten: number;
-  Radius: number;
+  Inten: number; // 排斥/吸引 力度
+  Radius: number; // 斥力影响范围
   opacityStep: number;
   context: CanvasRenderingContext2D | null;
   constructor(
@@ -39,7 +39,6 @@ class Particle {
     this.r = 1.2;
     this.color = [...color];
     this.opacity = 0;
-    /** 排斥/吸引 力度 */
     this.Inten = 0.95;
     this.Radius = 40;
     this.opacityStep = 1 / time;

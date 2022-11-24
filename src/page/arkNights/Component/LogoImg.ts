@@ -40,7 +40,7 @@ class LogoImg {
       const imgData = tmp_ctx?.getImageData(0, 0, imgW, imgH).data; // 获取像素点数据
       tmp_ctx?.clearRect(0, 0, this.width, this.height);
       // 筛选像素点
-      for (let y = 0; y < imgH; y += 5) {
+      for (let y = 0; y < imgH; y += 5) { // +5是因为imageData这个一维数组每四个元素记录一个像素点的位置
         for (let x = 0; x < imgW; x += 5) {
           // 像素点的序号
           const index = (x + y * imgW) * 4;
